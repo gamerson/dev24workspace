@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "modules/react/display-data-widget",
+            "modules/react/redux-store",
+            "modules/react/react-provider",
+            "modules/react/input-data-widget",
+            "modules/react/redux-provider"
+        ]
+    }
+}
