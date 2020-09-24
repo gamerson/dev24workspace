@@ -1,0 +1,4 @@
+Bundle-Name: sample-web
+Bundle-SymbolicName: sample.web
+Bundle-Version: 1.0.0
+Export-Package: sample.web.constants
