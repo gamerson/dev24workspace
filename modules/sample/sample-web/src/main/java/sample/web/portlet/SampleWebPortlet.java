@@ -1,5 +1,9 @@
 package sample.web.portlet;
 
+import cern.colt.Timer;
+import com.fasterxml.jackson.core.JsonFactory;
+import org.osgi.service.component.annotations.Reference;
+import sample.service.SampleLocalService;
 import sample.web.constants.SampleWebPortletKeys;
 
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -27,4 +31,12 @@ import org.osgi.service.component.annotations.Component;
 	service = Portlet.class
 )
 public class SampleWebPortlet extends MVCPortlet {
+
+	@Reference
+	SampleLocalService _sampleLocalService;
+
+	Timer timer = new Timer();
+
+	JsonFactory jsonFactory = new JsonFactory();
+
 }

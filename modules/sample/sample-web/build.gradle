@@ -2,6 +2,11 @@ dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 
 	compile project(":modules:sample:sample-api")
+	runtimeOnly project(":modules:sample:sample-service")
+
+	compile "com.fasterxml.jackson.core:jackson-core:2.11.2"
+
+	compileInclude "colt:colt:1.2.0"
 
 	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
 }

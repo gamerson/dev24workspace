@@ -1,0 +1,19 @@
+subprojects {
+    pluginManager.withPlugin("com.liferay.osgi.plugin") {
+        afterEvaluate {
+            if (deploy.enabled) {
+                deploy.doLast {
+                    configurations.default.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+                        if (artifact.extension == "jar") {
+                            project.copy {
+                                from artifact.file
+                                into project.deploy.destinationDir
+                                rename { "${artifact.name}.${artifact.extension}" }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
