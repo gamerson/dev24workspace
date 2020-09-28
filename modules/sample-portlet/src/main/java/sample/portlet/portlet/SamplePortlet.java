@@ -26,5 +26,5 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = Portlet.class
 )
-public class SamplePortlet extends MVCPortlet {
+public class SamplePortlet extends MVCPortlet { // FIXME: copy-request-parameters init-param default value change
 }
